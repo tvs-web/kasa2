@@ -1,0 +1,59 @@
+.banner {
+  & .kasa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    max-width: 1240px;
+    width: 100%;
+    height: 225px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    margin: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../../assets/Image\ source\ 1.png');
+    h2 {
+      color: White;
+      font-size: clamp(18px, 4vw, 48px);
+      text-align: center;
+      @media screen and (max-width: 320px) {
+        text-align: left;
+        padding-left: 15px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      height: 160px;
+    }
+    @media screen and (max-width: 425px) {
+      height: 111px;
+    }
+  }
+
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    max-width: 1240px;
+    width: 100%;
+    height: 225px;
+    background-size: cover;
+    background-position: center;
+
+    margin-bottom: 30px;
+    margin: auto;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('../../assets/Image\ source\ 2.png');
+    h2 {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      height: 160px;
+    }
+    @media screen and (max-width: 425px) {
+      height: 111px;
+    }
+  }
+}

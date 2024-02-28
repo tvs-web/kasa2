@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin: auto auto 30px auto;
+}
+.header .list {
+  gap: 3rem;
+  font-size: clamp(17px, 4vw, 24px);
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+@media screen and (max-width: 425px) {
+  .header .list {
+    gap: 1rem;
+    padding-left: 0;
+  }
+}
+.header .list a {
+  text-decoration-line: none;
+  display: inline;
+  color: black;
+}
+.header .list .underlined {
+  border-bottom: solid;
+  border-bottom-width: 2px;
+}
+@media screen and (max-width: 325px) {
+  .header img {
+    width: 40%;
+  }
+}/*# sourceMappingURL=Header.css.map */

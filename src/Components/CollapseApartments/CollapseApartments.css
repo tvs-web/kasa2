@@ -1,0 +1,65 @@
+.collapse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 1240px;
+  margin: auto;
+  color: white;
+  gap: 20px;
+}
+@media screen and (max-width: 425px) {
+  .collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: auto;
+  }
+}
+.collapse .collapse_global {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.collapse .collapse_global h3 {
+  margin: 0;
+  padding: 3px 10px 3px 10px;
+}
+.collapse .collapse_global p,
+.collapse .collapse_global ul {
+  color: black;
+  font-family: Montserrat;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 15px;
+}
+.collapse .collapse_global p li,
+.collapse .collapse_global ul li {
+  list-style-type: none;
+}
+.collapse .collapse_global .collapse_button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  background-color: #ff6060;
+  border-radius: 10px;
+  margin: 0;
+  font-family: Montserrat;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 700;
+  position: static;
+}
+.collapse .collapse_global .collapse_button:hover {
+  box-shadow: 0 2px 5px rgb(112, 20, 20);
+}
+.collapse .collapse_global .collapse_button .collapse_arrow {
+  rotate: 0deg;
+  padding: 3px 10px 3px 10px;
+}
+.collapse .collapse_global .collapse_button .collapse_arrow.rotate {
+  transform: rotateX(180deg);
+}/*# sourceMappingURL=CollapseApartments.css.map */

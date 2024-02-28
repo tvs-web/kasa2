@@ -1,0 +1,31 @@
+@import '../../Utils/Parcels/mixins';
+
+.header {
+  @include flexMid(row, space-between, center);
+  max-width: 1240px;
+  margin: auto auto 30px auto;
+  .list {
+    gap: 3rem;
+    font-size: clamp(17px, 4vw, 24px);
+    list-style-type: none;
+    @include flexMid(row, left, center);
+    @media screen and (max-width: 425px) {
+      gap: 1rem;
+      padding-left: 0;
+    }
+    a {
+      text-decoration-line: none;
+      display: inline;
+      color: black;
+    }
+    .underlined {
+      border-bottom: solid;
+      border-bottom-width: 2px;
+    }
+  }
+  @media screen and (max-width: 325px) {
+    img {
+      width: 40%;
+    }
+  }
+}
