@@ -4,7 +4,7 @@ import Rating from '../Rating/Rating';
 import './Description.scss';
 
 export default function Description(props) {
-  const { id, title, host, location, rating, tags } = props;
+  const { title, host, location, rating, tags } = props;
   const name = host.name.split(' ');
   const hostPicture = host?.picture;
   return (
