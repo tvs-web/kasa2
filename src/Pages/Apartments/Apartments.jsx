@@ -9,8 +9,7 @@ import Description from '../../Components/Description/Description';
 import Logo from '../../assets/LOGO.png';
 import Logow from '../../assets/.LOGOwhite.png';
 import './apartments.scss';
-import CollapseApartments from '../../Components/CollapseApartments/CollapseApartments';
-
+import Collapse from '../../Components/Collapse/Collapse';
 export default function Apartments() {
   const { id } = useParams();
   const item = Data.find((data) => data.id === id);
@@ -34,14 +33,20 @@ export default function Apartments() {
         rating={item.rating}
         tags={item.tags}
       />
-      <CollapseApartments
-        // key={id}
-        DataId={id}
-        DataTitle1="Description"
-        DataTitle2="Equipements"
-        DataDescription={item.description}
-        DataEquipments={item.equipments}
-      />
+      <div className="toto">
+        <Collapse
+          title="Description"
+          text={item.description}
+          // eslint-disable-next-line react/style-prop-object
+          style="apartments"
+        />
+        <Collapse
+          title="Equipements"
+          equipments={item.equipments}
+          // eslint-disable-next-line react/style-prop-object
+          style="apartments"
+        />
+      </div>
       <Footer
         footerLogo={Logow}
         footerAlt="kasa"

@@ -1,0 +1,13 @@
+@import '../../Utils/Parcels/mixins';
+.apartments {
+  .toto {
+    @include flexMid(row, space-between, baseline);
+    max-width: 1240px;
+    margin: auto;
+    gap: 80px;
+    @media screen and (max-width: 425px) {
+      @include flexMid(column, center, baseline);
+      gap: 20px;
+    }
+  }
+}

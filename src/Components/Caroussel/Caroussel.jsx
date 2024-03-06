@@ -50,7 +50,6 @@ export default function Carousel({ pictures }) {
           src={slide}
           alt={`slide ${index}`}
           className={index === slideShow ? 'active' : 'slider'}
-          onClick={() => setSlideShow(index)}
         />
       ))}
     </div>

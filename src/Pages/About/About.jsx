@@ -2,13 +2,11 @@ import React from 'react';
 import Header from '../../Components/Header/Header';
 import Banner from '../../Components/Banner/Banner';
 import Footer from '../../Components/Footer/Footer';
-import CollapsAbout from '../../Components/CollapseAbout/CollapsAbout';
 import Logo from '../../assets/LOGO.png';
 import Logow from '../../assets/.LOGOwhite.png';
 import Prest from '../../Utils/prestation.json';
-
-import './About.scss';
-
+import Collapse from '../../Components/Collapse/Collapse';
+import '../../Components/Collapse/Collapse.scss';
 export default function About() {
   return (
     <div className="about">
@@ -19,14 +17,12 @@ export default function About() {
         headerNav2="A propos"
       />{' '}
       <Banner />
-      {Prest.map(({ id, text, title }) => (
-        <CollapsAbout
-          key={id}
-          PrestId={id}
-          prestTitle={title}
-          prestText={text}
-        />
-      ))}
+      <>
+        {Prest.map(({ id, text, title }) => (
+          // eslint-disable-next-line react/style-prop-object
+          <Collapse key={id} title={title} text={text} style="about" />
+        ))}
+      </>
       <Footer
         footerLogo={Logow}
         footerAlt="kasa"
